@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mastermind</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="script" href="script.js">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    
+    <h1> 
+        Mastermind
+    </h1>
+
+    <div id="gameArea">
+
+        <div class="inputArea">
+
+            <div class="inputSection" id="row1">
+                <span onclick="set_color(3)" class="emptySlot" id="row1Slot3"></span>
+                <span onclick="set_color(2)" class="emptySlot" id="row1Slot2"> </span>
+                <span onclick="set_color(1)" class="emptySlot" id="row1Slot1"></span>
+                <span onclick="set_color(0)" class="emptySlot" id="row1Slot0"></span>
+            </div>
+
+            <div class="inputSection" id="row2">
+                <span onclick="set_color(3)" class="emptySlot" id="row2Slot3"></span>
+                <span onclick="set_color(2)" class="emptySlot" id="row2Slot2"></span>
+                <span onclick="set_color(1)" class="emptySlot" id="row2Slot1"></span>
+                <span onclick="set_color(0)" class="emptySlot" id="row2Slot0"></span>
+            </div>
+
+            <div class="inputSection" id="row3">
+                <span onclick="set_color(3)" class="emptySlot" id="row3Slot3"></span>
+                <span onclick="set_color(2)" class="emptySlot" id="row3Slot2"></span>
+                <span onclick="set_color(1)" class="emptySlot" id="row3Slot1"></span>
+                <span onclick="set_color(0)" class="emptySlot" id="row3Slot0"></span>
+            </div>
+
+            <div class="inputSection" id="row4">
+                <span onclick="set_color(3)" class="emptySlot" id="row4Slot3"></span>
+                <span onclick="set_color(2)" class="emptySlot" id="row4Slot2"></span>
+                <span onclick="set_color(1)" class="emptySlot" id="row4Slot1"></span>
+                <span onclick="set_color(0)" class="emptySlot" id="row4Slot0"></span>
+            </div>
+
+            <div class="inputSection" id="row5">
+                <span onclick="set_color(3)" class="emptySlot" id="row5Slot3"></span>
+                <span onclick="set_color(2)" class="emptySlot" id="row5Slot2"></span>
+                <span onclick="set_color(1)" class="emptySlot" id="row5Slot1"></span>
+                <span onclick="set_color(0)" class="emptySlot" id="row5Slot0"></span>
+            </div>
+
+            <div class="inputSection" id="row6">
+                <span onclick="set_color(3)" class="emptySlot" id="row6Slot3"></span>
+                <span onclick="set_color(2)" class="emptySlot" id="row6Slot2"></span>
+                <span onclick="set_color(1)" class="emptySlot" id="row6Slot1"></span>
+                <span onclick="set_color(0)" class="emptySlot" id="row6Slot0"></span>
+            </div>
+
+            <div class="inputSection" id="row7">
+                <span onclick="set_color(3)" class="emptySlot" id="row7Slot3"></span>
+                <span onclick="set_color(2)" class="emptySlot" id="row7Slot2"></span>
+                <span onclick="set_color(1)" class="emptySlot" id="row7Slot1"></span>
+                <span onclick="set_color(0)" class="emptySlot" id="row7Slot0"></span>
+            </div>
+            
+            <div class="inputSection" id="row8">
+                <span onclick="set_color(3)" class="emptySlot" id="row8Slot3"></span>
+                <span onclick="set_color(2)" class="emptySlot" id="row8Slot2"></span>
+                <span onclick="set_color(1)" class="emptySlot" id="row8Slot1"></span>
+                <span onclick="set_color(0)" class="emptySlot" id="row8Slot0"></span>
+            </div>
+
+            <div class="inputSection" id="row9">
+                <span onclick="set_color(3)" class="emptySlot" id="row9Slot3"></span>
+                <span onclick="set_color(2)" class="emptySlot" id="row9Slot2"></span>
+                <span onclick="set_color(1)" class="emptySlot" id="row9Slot1"></span>
+                <span onclick="set_color(0)" class="emptySlot" id="row9Slot0"></span>
+            </div>
+
+            <div class="inputSection" id="row10">
+                <span onclick="set_color(3)" class="emptySlot" id="row10Slot3"></span>
+                <span onclick="set_color(2)" class="emptySlot" id="row10Slot2"></span>
+                <span onclick="set_color(1)" class="emptySlot" id="row10Slot1"></span>
+                <span onclick="set_color(0)" class="emptySlot" id="row10Slot0"></span>
+            </div>
+
+        </div>
+
+        <div class="hintArea">
+
+            <div class="hintBox" id="row1HintBox">
+                <span class="emptyHintSlot" id ="row1HintSlot0"></span>
+                <span class="emptyHintSlot" id ="row1HintSlot1"></span>
+                <span class="emptyHintSlot" id ="row1HintSlot2"></span>
+                <span class="emptyHintSlot" id = "row1HintSlot3"></span>
+            </div>
+            
+            <div class="hintBox" id="row2Hint">
+                <span class="emptyHintSlot" id = "row2HintSlot0"></span>
+                <span class="emptyHintSlot" id = "row2HintSlot1"></span>
+                <span class="emptyHintSlot" id = "row2HintSlot2"></span>
+                <span class="emptyHintSlot" id = "row2HintSlot3"></span>
+            </div>
+
+            <div class="hintBox" id="row3Hint">
+                <span class="emptyHintSlot" id = "row3HintSlot0"></span>
+                <span class="emptyHintSlot" id = "row3HintSlot1"></span>
+                <span class="emptyHintSlot" id = "row3HintSlot2"></span>
+                <span class="emptyHintSlot" id = "row3HintSlot3"></span>
+            </div>
+
+            <div class="hintBox" id="row4Hint">
+                <span class="emptyHintSlot" id = "row4HintSlot0"></span>
+                <span class="emptyHintSlot" id = "row4HintSlot1"></span>
+                <span class="emptyHintSlot" id = "row4HintSlot2"></span>
+                <span class="emptyHintSlot" id = "row4HintSlot3"></span>
+            </div>
+
+            <div class="hintBox" id="row5Hint">
+                <span class="emptyHintSlot" id = "row5HintSlot0"></span>
+                <span class="emptyHintSlot" id = "row5HintSlot1"></span>
+                <span class="emptyHintSlot" id = "row5HintSlot2"></span>
+                <span class="emptyHintSlot" id = "row5HintSlot3"></span>
+            </div>
+
+            <div class="hintBox" id="row6Hint">
+                <span class="emptyHintSlot" id = "row6HintSlot0"></span>
+                <span class="emptyHintSlot" id = "row6HintSlot1"></span>
+                <span class="emptyHintSlot" id = "row6HintSlot2"></span>
+                <span class="emptyHintSlot" id = "row6HintSlot3"></span>
+            </div>
+
+            <div class="hintBox" id="row7Hint">
+                <span class="emptyHintSlot" id = "row7HintSlot0"></span>
+                <span class="emptyHintSlot" id = "row7HintSlot1"></span>
+                <span class="emptyHintSlot" id = "row7HintSlot2"></span>
+                <span class="emptyHintSlot" id = "row7HintSlot3"></span>
+            </div>
+
+            <div class="hintBox" id="row8Hint">
+                <span class="emptyHintSlot" id = "row8HintSlot0"></span>
+                <span class="emptyHintSlot" id = "row8HintSlot1"></span>
+                <span class="emptyHintSlot" id = "row8HintSlot2"></span>
+                <span class="emptyHintSlot" id = "row8HintSlot3"></span>
+            </div>
+
+            <div class="hintBox" id="row9Hint">
+                <span class="emptyHintSlot" id = "row9HintSlot0"></span>
+                <span class="emptyHintSlot" id = "row9HintSlot1"></span>
+                <span class="emptyHintSlot" id = "row9HintSlot2"></span>
+                <span class="emptyHintSlot" id = "row9HintSlot3"></span>
+            </div>
+
+            <div class="hintBox" id="row10Hint">
+                <span class="emptyHintSlot" id = "row10HintSlot0"></span>
+                <span class="emptyHintSlot" id = "row10HintSlot1"></span>
+                <span class="emptyHintSlot" id = "row10HintSlot2"></span>
+                <span class="emptyHintSlot" id = "row10HintSlot3"></span>
+            </div>
+
+        </div>
+
+        <div class="pieceArea">
+            <span onclick = "choose_color('blue')" class="piece" id="pieceBlue"></span>
+            <span onclick = "choose_color('green')" class="piece" id="pieceGreen"></span>
+            <span onclick = "choose_color('red')" class="piece" id="pieceRed"></span>
+            <span onclick = "choose_color('yellow')" class="piece" id="pieceYellow"></span>
+        </div>
+
+        <div class="checkArea">
+
+            <div onclick="click_on_check('row1')" class="checkSection" id="row1Check">
+                <h2 class="check">Check</h2>
+            </div>
+
+            <div onclick="click_on_check('row2')" class="checkSection" id="row2Check">
+                <h2 class="check">Check</h2>
+            </div>
+
+            <div onclick="click_on_check('row3')" class="checkSection" id="row3Check">
+                <h2 class="check">Check</h2>
+            </div>
+
+            <div onclick="click_on_check('row4')" class="checkSection" id="row4Check">
+                <h2 class="check">Check</h2>
+            </div>
+
+            <div onclick="click_on_check('row5')" class="checkSection" id="row5Check">
+                <h2 class="check">Check</h2>
+            </div>
+
+            <div onclick="click_on_check('row6')" class="checkSection" id="row6Check">
+                <h2 class="check">Check</h2>
+            </div>
+
+            <div onclick="click_on_check('row7')" class="checkSection" id="row7Check">
+                <h2 class="check">Check</h2>
+            </div>
+
+            <div onclick="click_on_check('row8')" class="checkSection" id="row8Check">
+                <h2 class="check">Check</h2>
+            </div>
+
+            <div onclick="click_on_check('row9')" class="checkSection" id="row9Check">
+                <h2 class="check">Check</h2>
+            </div>
+
+            <div onclick="click_on_check('row10')" class="checkSection" id="row10Check">
+                <h2 class="check">Check</h2>
+            </div>
+
+        </div>
+
+    </div>
+
+    <span id="mouseCircle"></span>
+
+</body>
+</html>

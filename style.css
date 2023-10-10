@@ -1,0 +1,215 @@
+h1 {
+    text-align: center;
+    font-size: 350%;
+    pointer-events: none;
+}
+
+#mouseCircle {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    margin: -8px 0 0 -8px;
+    border: 2px solid black;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.inputArea {
+    grid-area : i;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.hintArea {
+    grid-area : h;
+    background-color: chocolate;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.pieceArea {
+    grid-area: p;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-style: solid;
+    border-width: medium;
+    background-color: chocolate;
+}
+
+h2 {
+    font-size: 2vw;
+    border-style: solid;
+    border-width: medium;
+    border-color: black;
+    color: white;
+    padding: 2%;
+    margin: 5%;
+}
+
+.checkArea {
+    grid-area : c;
+    background-color: chocolate;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#gameArea {
+    background-color: burlywood;
+    height: 60%;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    grid-template-areas: "h h h h h h h p"
+                         "h h h h h h h p"
+                         "i i i i i i i p"
+                         "i i i i i i i p"
+                         "i i i i i i i p"
+                         "i i i i i i i p"
+                         "i i i i i i i p"
+                         "i i i i i i i p"
+                         "c c c c c c c p";
+    position: absolute;  
+    top: 50%;  
+    left: 50%;  
+    transform: translate(-50%, -50%); 
+}
+
+.emptySlot {
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: medium;
+  }
+  @media (max-width: 950px) {
+    .emptySlot {
+        height: 35px;
+        width: 35px;
+    }
+}
+
+@media (max-width: 650px) {
+    .emptySlot {
+        height: 22.25px;
+        width: 22.25px;
+    }
+}
+
+.inputSection {
+    border-style: solid;
+    border-right-style: none;
+    border-width: medium;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.piece {
+    height: 60px;
+    width: 60px;
+    background-color: black;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: medium;
+}
+
+    @media (max-width: 950px) {
+        .piece {
+            height: 45px;
+            width: 45px;
+        }
+    }
+
+    @media (max-width: 650px) {
+        .piece {
+            height: 35px;
+            width: 35px;
+        }
+    }
+#pieceBlue {
+    background-color: blue;
+}
+
+#pieceGreen {
+    background-color: green;
+}
+
+#pieceRed {
+    background-color: red;
+}
+
+#pieceYellow {
+    background-color: yellow;
+}
+
+.hintBox {
+    border-style: solid;
+    border-width: medium;
+    border-bottom-style: none;
+    border-right-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.emptyHintSlot {
+    height: 30px;
+    width: 30px;
+    background-color: gray;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: medium;
+} 
+
+@media (max-width: 1071px) {
+    .emptyHintSlot {
+        height: 25px;
+        width: 25px;
+    }
+}
+
+@media (max-width: 950px) {
+    .emptyHintSlot {
+        height: 15px;
+        width: 15px;
+    }
+}
+
+@media (max-width: 650px) {
+    .emptyHintSlot {
+        height: 10px;
+        width: 10px;
+    }
+}
+
+.checkSection {
+    border-style: solid;
+    border-width: medium;
+    border-top-style: none;
+    border-right-style: none;
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.confetti{
+    max-width: 640px;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    user-select: none;
+ }
